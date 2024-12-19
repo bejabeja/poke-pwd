@@ -1,0 +1,37 @@
+.container {
+    padding: 20px;
+}
+
+.view-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    gap: 1rem;
+
+}
+
+.action-btn {
+    background-color: green;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    min-width: 120px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    color: white;
+    font-weight: 700;
+}
+
+.action-btn:hover {
+    background-color: blue;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: flex-start;
+}
+

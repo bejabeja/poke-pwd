@@ -1,0 +1,50 @@
+.book-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #f1f1f1;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+mat-card-header {
+    padding: 1rem;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 14px;
+    padding: 8px 16px;
+    min-width: 120px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: green;
+}
+
+mat-card img {
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+mat-card-title {
+    font-size: 1.2rem;
+}
+
+mat-card-subtitle {
+    color: gray;
+}

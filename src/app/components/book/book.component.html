@@ -1,0 +1,49 @@
+<div *ngIf="isLoading" class="loading-container">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <p>Loading books...</p>
+</div>
+
+<div class="container mt-5" *ngIf="!isLoading">
+  <div *ngIf="!book" class="text-center text-muted">
+    <p>No book information available.</p>
+  </div>
+
+  <div *ngIf="book">
+    <div class="row">
+      <div class="col-md-9">
+        <h2>{{ book.title }}</h2>
+      </div>
+
+      <div class="col-md-3 text-right">
+        <a class="btn btn-danger" routerLink="/">Back</a>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12 text-center">
+        <img
+          *ngIf="book?.cover"
+          style="max-width: 400px; height: auto"
+          class="rounded"
+          [src]="book.cover"
+          alt="`Cover ${book.title}`"
+        />
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Book Details </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><strong>ID:</strong> {{ book.id }}</p>
+          <p><strong>Author:</strong> {{ book.title }}</p>
+          <p><strong>Release Date:</strong> {{ book.release_date }}</p>
+          <p><strong>Pages:</strong> {{ book.pages }}</p>
+          <p><strong>Summary:</strong> {{ book.summary }}</p>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+</div>

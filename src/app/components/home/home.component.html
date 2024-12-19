@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Harry Potter Books</h1>
+
+  <div *ngIf="isLoading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <p>Loading books...</p>
+  </div>
+
+  <div class="view-buttons" *ngIf="!isLoading">
+    <button mat-raised-button class="action-btn" (click)="changeView('table')">
+      Table View
+    </button>
+    <button mat-raised-button class="action-btn" (click)="changeView('card')">
+      Card View
+    </button>
+  </div>
+  <app-grid
+    @listAnimation
+    *ngIf="!isLoading && isTableView"
+    [dataSource]="books"
+    [displayedColumns]="displayedColumns"
+  ></app-grid>
+
+  <div class="card-container" *ngIf="!isLoading && !isTableView">
+    <app-card *ngFor="let book of books" [book]="book"></app-card>
+  </div>
+</div>
