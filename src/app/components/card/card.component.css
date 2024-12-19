@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     background-color: #f1f1f1;
     border-radius: 1rem;
     padding: 1rem;
@@ -10,6 +10,7 @@
 
 mat-card-header {
     padding: 1rem;
+    text-align: center;
 }
 
 mat-card-actions {
@@ -47,4 +48,25 @@ mat-card-title {
 
 mat-card-subtitle {
     color: gray;
+}
+
+
+
+@media (max-width: 768px) {
+    .book-card {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    mat-card img {
+        height: 120px;
+    }
+
+    mat-card-title {
+        font-size: 0.95rem;
+    }
+
+    mat-card-subtitle {
+        font-size: 0.8rem;
+    }
 }
